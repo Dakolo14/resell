@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Konga Health Reseller</title>
+    <meta name="description" content="Welcome to Konga Health and Beauty – Your One-Stop Shop for Premium Skincare and Beauty Products.">
+    <!-- Favicon -->
+    <link rel="icon" href="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1721911358/Konga%20Corporate%2024_07_2024/favicon-32x32.png" type="image/x-icon">
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="Konga Health and Beauty, skincare products, premium beauty, reseller opportunities, CeraVe, Garnier, La Roche-Posay, dermatologists, estheticians, pharmacists, healthcare professionals, beauty trends, live launch event, authentic beauty products, Nigeria, fast shipping, genuine skincare, beauty professionals, Konga Health, beauty reseller program">
+    <meta name="author" content="Konga Health and Beauty">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+
+
+    <header>
+      <img
+        src="header.png"
+        style="width: 100%"
+        alt="Konga Health Logo"
+      />
+    </header>
+
+
+
+    <div class="mySlides">
+        <a id="dialog-trigger">
+          <img
+            src="main-banner.png"
+            style="width: 100%; cursor: pointer;"
+            alt="Konga Health Resellers banner Image"
+          />
+        </a>
+    </div>
+
+
+<!--     
+    <div class="mySlides mobile">
+      <a id="dialog-trigger">
+        <img
+          src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1721816569/Konga%20Corporate%2024_07_2024/main-banner-mob.png"
+          style="width: 100%"
+          alt="Order Bulk Products Banner Image"
+        />
+      </a>
+    </div> -->
+
+    <div id="dialog-portal">
+      <div id="dialog-overlay" class="overlay hidden"></div>
+      <div id="dialog-content" class="dialog hidden">
+        <div id="dialog-header">
+          <h2 id="dialog-title">Please fill the form and we will contact you</h2>
+          <button id="dialog-close">&times;</button>
+        </div>
+        <hr style="border: #a9a9a9 1px solid;">
+        <div id="dialog-body">
+          <div class="section-form" id="form-fill">
+            <div class="form-img">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/callerid.png" alt="Called Id for konga health">
+            </div>
+              <div class="container-form">
+                  <form id="form">
+                      <!--  Company Name & Address  -->
+                      <div class="form-groups full-width">
+                        <label for="companyName">Company Name <span class="required">*</span></label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name" required>
+                      </div>
+                      <div class="form-groups full-width">
+                        <label for="companyAddress">Company Address <span class="required">*</span></label>
+                        <input type="text" id="companyAddress" name="companyAddress" placeholder="Enter Company Address" required>
+                      </div>
+                      
+                      <!--  Staff to Contact  -->
+                      <div class="form-groups full-width">
+                        <label for="contactPerson">Contact Person <span class="required">*</span></label>
+                        <input type="text" id="contactPerson" name="contactPerson" placeholder="Enter your Full Name" required>
+                      </div>
+      
+      
+                      <!--  Telephone Number  -->
+                        <div class="form-groups full-width">
+                          <label for="phone">Phone Number <span class="required">*</span></label>
+                          <input type="number" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                        </div>
+
+                        <!--  Whatsapp Number   -->
+                        <div class="form-groups full-width">
+                          <label for="whatsappNumber">Whatsapp Number <span class="required">*</span></label>
+                          <input type="number" id="whatsappNumber" name="whatsappNumber" placeholder="Enter your Whatsapp Number" required>
+                        </div>
+                      
+                       <!--  Email Address  -->
+                       <div class="form-groups full-width">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                      </div>
+                      
+                      <!--  Product Categories  -->
+      
+                      <div class="form-groups full-width">
+                        <label for="categories">Designation<span class="required">*</span></label>
+                        <div class="custom-select-wrapper">
+                          <select id="categories" name="categories" class="custom-select" required>
+                            <option value="">Choose Category</option>
+                            <option value="Doctor">Doctor</option>
+                            <option value="Pharmacist">Pharmacist</option>
+                            <option value="Dermatologist">Dermatologist</option>
+                            <option value="Retail seller">Retail seller</option>
+                            <option value=">Bulk seller">Bulk seller</option>
+                            <option value="Others">Others</option>
+                          </select>
+                        </div>
+                      </div>
+                      
+                      <div id="message"></div>
+                      <button type="submit" class="btn mb-5">Submit Form</button>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    
+        
+      
+      <div class="mySlides">
+          <img
+            src="banner2.png"
+            style="width: 100%; cursor: pointer;"
+            alt="Konga Health Resellers banner Image"
+          />
+      </div>
+
+        <div>
+            <img
+              src="banner3.png"
+              style="width: 100%"
+            />
+        </div>
+        
+        <footer>
+          <img
+            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/logo.png"
+            style="width: 100%; margin-bottom: 20px;"
+            alt="Konga Health Logo"
+          />
+          <img
+            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724942269/landingPages/Konga%20Health%20Resellers%2025_09_2024/cerave-logo.png"
+            style="width: 100%; margin-bottom: 20px;"
+            alt="Konga Health Logo"
+          />
+          <img
+            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1725006488/landingPages/Konga%20Health%20Resellers%2025_09_2024/la-roshe.png"
+            style="width: 100%; margin-bottom: 20px;"
+            alt="Konga Health Logo"
+          />
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+    
+
+  </body>
+</html>
